@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arumugam Abinav — Personal Portfolio
 
-## Getting Started
+Premium personal portfolio for **Arumugam Abinav** — student at Riverside Secondary School, Singapore. Developer, builder, AI enthusiast, aspiring entrepreneur.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- next-themes (dark default + light toggle)
+- Static export for Cloudflare Pages
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build (Cloudflare Pages)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Deploy the `out/` folder to Cloudflare Pages.
 
-To learn more about Next.js, take a look at the following resources:
+Build settings:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework preset:** Next.js (static export) or None
+- **Build command:** `npm run build`
+- **Output directory:** `out`
+- **Environment variable:** `NEXT_PUBLIC_SITE_URL=https://your-domain`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> If `akk.sg` already hosts the AKK Engineering company site, use a subdomain such as `abinav.akk.sg` and set `NEXT_PUBLIC_SITE_URL` accordingly.
 
-## Deploy on Vercel
+## Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Editable data lives in `src/data/`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| File | Purpose |
+|------|---------|
+| `site.ts` | Name, SEO, email, socials, school |
+| `projects.ts` | Projects + experiments |
+| `apps.ts` | Google Play apps |
+| `skills.ts` | Skills + interests |
+| `journey.ts` | Timeline |
+
+Add project screenshots under `public/projects/`.
+
+## Contact form
+
+The contact form opens the visitor's email client via `mailto:` to `arumugamabinav22@gmail.com`. Swap to Formspree/Web3Forms later if you want server-side delivery without exposing a mailbox flow.
