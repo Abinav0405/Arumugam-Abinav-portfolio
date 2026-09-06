@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Arumugam Abinav — Student, Developer & Builder in Singapore",
   description:
     "Arumugam Abinav is a student at Riverside Secondary School in Singapore who builds real software — from workforce platforms to AI experiments. Developer, builder, and aspiring entrepreneur.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://akk.sg",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://arumugam-abinav.akk.sg",
   locale: "en_SG",
   email: "arumugamabinav22@gmail.com",
   school: {
